@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+.codex
+.agents
+playwright-report
+test-results
+npm-debug.log*
+Dockerfile*
+docker-compose*.yml
