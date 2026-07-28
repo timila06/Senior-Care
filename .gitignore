@@ -11,6 +11,7 @@ coverage/
 playwright-report/
 test-results/
 .lighthouse/
+tmp/
 *.log
 npm-debug.log*
 yarn-debug.log*
