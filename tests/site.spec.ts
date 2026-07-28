@@ -19,7 +19,19 @@ test("desktop navigation reaches services", async ({ page, isMobile }) => {
   await expect(page).toHaveURL(/\/services$/);
 });
 
+test("mobile navigation reaches services", async ({ page, isMobile }) => {
+  test.skip(!isMobile, "Mobile navigation check");
+  await page.goto("/");
+  await page.locator('summary[aria-label="Open navigation"]').click();
+  await page.getByRole("navigation", { name: "Mobile navigation" }).getByRole("link", { name: "Services" }).click();
+  await expect(page).toHaveURL(/\/services$/);
+});
+
 test("inquiry validates and remains local", async ({ page }) => {
+  const submissions: string[] = [];
+  page.on("request", (request) => {
+    if (request.method() !== "GET") submissions.push(request.url());
+  });
   await page.goto("/contact");
   await page.getByRole("button", { name: "Send Inquiry" }).click();
   await expect(page.getByText("Please enter your name.")).toBeVisible();
@@ -29,4 +41,5 @@ test("inquiry validates and remains local", async ({ page }) => {
   await page.getByRole("button", { name: "Send Inquiry" }).click();
   await expect(page.getByRole("status")).toContainText("does not send inquiries yet");
   await expect(page).toHaveURL(/\/contact$/);
+  expect(submissions).toEqual([]);
 });

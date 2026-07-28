@@ -11,7 +11,7 @@ export function SiteHeader() {
       <div className="container-shell flex h-[4.5rem] items-center justify-between">
         <SiteLogo />
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
-          {navigation.map((item) => <Link className="rounded-md text-sm font-semibold text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring" key={item.href} href={item.href}>{item.label}</Link>)}
+          {navigation.map((item) => <Link className="rounded-md text-base font-semibold text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring" key={item.href} href={item.href}>{item.label}</Link>)}
           <Link href="/contact" className={cn(buttonVariants({ size: "lg" }), "h-11 px-5")}>Schedule a Visit</Link>
         </nav>
         <details className="group relative md:hidden">
