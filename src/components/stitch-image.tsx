@@ -18,10 +18,13 @@ export function StitchImage({
   priority = false,
   sizes = "(max-width: 768px) 100vw, 50vw",
 }: StitchImageProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const resolvedSrc = src.startsWith("/") ? `${basePath}${src}` : src;
+
   return (
     <div className={cn("relative overflow-hidden bg-muted", className)}>
       <Image
-        src={src}
+        src={resolvedSrc}
         alt={alt}
         fill
         priority={priority}
