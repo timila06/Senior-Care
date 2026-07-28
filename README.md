@@ -2,6 +2,8 @@
 
 A four-page senior care marketing website concept for Bangkok, built with Next.js, TypeScript, Tailwind CSS, customized shadcn components, and Phosphor icons.
 
+Public preview: [https://timila06.github.io/Senior-Care/](https://timila06.github.io/Senior-Care/)
+
 ## Local development
 
 ```powershell
@@ -28,3 +30,5 @@ docker compose up --build
 ```
 
 All photography is AI-generated for mockup use and must be replaced before launch. The inquiry form validates locally and sends or stores nothing.
+
+Pushes to `main` automatically build and publish the static preview through GitHub Pages.
