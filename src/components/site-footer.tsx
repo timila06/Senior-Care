@@ -1,16 +1,37 @@
 import Link from "next/link";
-import { navigation, siteConfig } from "@/lib/site-data";
 import { SiteLogo } from "./site-logo";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t bg-card">
-      <div className="container-shell grid gap-12 py-14 md:grid-cols-[1.5fr_1fr_1fr]">
-        <div><SiteLogo /><p className="mt-5 max-w-sm text-sm leading-7 text-muted-foreground">{siteConfig.description}</p></div>
-        <div><p className="text-sm font-extrabold">Explore</p><div className="mt-4 grid gap-3">{navigation.map((item) => <Link className="text-sm text-muted-foreground hover:text-foreground" key={item.href} href={item.href}>{item.label}</Link>)}<Link className="text-sm text-muted-foreground hover:text-foreground" href="/contact">Contact</Link></div></div>
-        <div><p className="text-sm font-extrabold">Location</p><p className="mt-4 text-sm text-muted-foreground">{siteConfig.location}</p><p className="mt-3 text-xs leading-5 text-muted-foreground">Official contact details are pending for this website mockup.</p></div>
+    <footer className="bg-surface-highest">
+      <div className="container-shell grid gap-12 py-20 md:grid-cols-3">
+        <div>
+          <SiteLogo />
+          <p className="mt-6 max-w-sm text-base leading-7 text-muted-foreground">
+            Residential support, daily care, and thoughtful wellbeing for older adults in Bangkok.
+          </p>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="font-sans text-sm font-bold uppercase tracking-wider">Quick Links</h2>
+          <Link className="text-base text-muted-foreground hover:text-primary hover:underline" href="/services">Care &amp; Services</Link>
+          <Link className="text-base text-muted-foreground hover:text-primary hover:underline" href="/about">Residential Life</Link>
+          <Link className="text-base text-muted-foreground hover:text-primary hover:underline" href="/contact">Contact Us</Link>
+          <Link className="text-base text-muted-foreground hover:text-primary hover:underline" href="/contact#faq">Common Questions</Link>
+        </div>
+        <div className="flex flex-col gap-3">
+          <h2 className="font-sans text-sm font-bold uppercase tracking-wider">Location</h2>
+          <p className="text-base text-muted-foreground">Bangkok, Thailand</p>
+          <p className="max-w-sm text-sm leading-6 text-muted-foreground">
+            Official address, phone, email, and LINE details are pending.
+          </p>
+        </div>
       </div>
-      <div className="border-t"><div className="container-shell flex flex-col gap-2 py-5 text-xs text-muted-foreground sm:flex-row sm:justify-between"><p>Copyright {new Date().getFullYear()} Willow Grove</p><p>Concept website. Mockup images do not show Willow Grove residents or premises.</p></div></div>
+      <div className="border-t border-border">
+        <div className="container-shell flex flex-col gap-2 py-6 text-sm text-muted-foreground sm:flex-row sm:justify-between">
+          <p>Copyright {new Date().getFullYear()} Willow Grove</p>
+          <p>Concept website. Images do not show actual residents or premises.</p>
+        </div>
+      </div>
     </footer>
   );
 }
