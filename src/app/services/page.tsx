@@ -33,7 +33,7 @@ export default function ServicesPage() {
       <section id="residential-assisted-living" className="container-shell scroll-mt-28 pb-20">
         <div className="grid auto-rows-[20rem] gap-5 lg:grid-cols-12">
           <article className="relative overflow-hidden rounded-xl lg:col-span-8 lg:row-span-2">
-            <StitchImage src={stitchAssets.serviceSuite} alt="Concept image of a calm assisted living suite" className="absolute inset-0 size-full rounded-none" priority />
+            <StitchImage src={stitchAssets.serviceSuite} alt="Concept image of a calm shared assisted living room" className="absolute inset-0 size-full rounded-none" priority />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/15 to-transparent" />
             <div className="absolute bottom-0 max-w-2xl p-8 text-white sm:p-10">
               <HouseLine size={38} weight="duotone" />
@@ -103,7 +103,7 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
-          <StitchImage src={stitchAssets.healthMonitoring} alt="Concept image of organized health monitoring in a warm residential setting" className="h-[34rem] rounded-xl custom-shadow" />
+          <StitchImage src={stitchAssets.healthMonitoring} alt="Concept image of an older couple discussing their health with a doctor" className="h-[34rem] rounded-xl custom-shadow" />
         </div>
       </section>
 

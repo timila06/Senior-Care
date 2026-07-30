@@ -20,7 +20,7 @@ export default function HomePage() {
       <section className="relative min-h-[46rem] overflow-hidden">
         <StitchImage
           src={stitchAssets.homeHero}
-          alt="Concept image of older adults enjoying a sunlit garden"
+          alt="Concept image of a caregiver providing thoughtful daily support in a homelike room"
           className="absolute inset-0 size-full rounded-none"
           priority
           sizes="100vw"
@@ -78,7 +78,7 @@ export default function HomePage() {
         <div className="container-shell grid items-center gap-12 lg:grid-cols-2">
           <StitchImage
             src={stitchAssets.homeLounge}
-            alt="Concept image of a warm residential lounge overlooking greenery"
+            alt="Concept image of a caregiver monitoring an older adult's blood pressure"
             className="h-[34rem] rounded-xl custom-shadow"
           />
           <div className="lg:pl-8">

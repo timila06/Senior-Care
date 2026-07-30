@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
-  [stitchAssets.garden, "Concept image of a landscaped garden"],
-  [stitchAssets.sunroom, "Concept image of a bright garden room"],
-  [stitchAssets.artStudio, "Concept image of a welcoming creative studio"],
-  [stitchAssets.wellnessSuite, "Concept image of a senior-friendly wellness room"],
+  [stitchAssets.garden, "Concept image of a caregiver and older adult gardening together"],
+  [stitchAssets.sunroom, "Concept image of older adults enjoying a board game together"],
+  [stitchAssets.artStudio, "Concept image of a caregiver and older adult making crafts together"],
+  [stitchAssets.wellnessSuite, "Concept image of older adults taking part in seated exercise"],
 ] as const;
 
 export default function AboutPage() {
@@ -57,7 +57,7 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
-          <StitchImage src={stitchAssets.corridor} alt="Concept image of a wide, accessible residential corridor" className="h-[25rem] rounded-xl custom-shadow" />
+          <StitchImage src={stitchAssets.corridor} alt="Concept image of a bright, accessible shared residential room" className="h-[25rem] rounded-xl custom-shadow" />
         </div>
       </section>
 
@@ -71,11 +71,11 @@ export default function AboutPage() {
           </div>
           <div className="grid auto-rows-[18rem] gap-5 lg:grid-cols-12">
             <article className="relative overflow-hidden rounded-xl lg:col-span-7 lg:row-span-2">
-              <StitchImage src={stitchAssets.suite} alt="Concept image of a light-filled private suite" className="absolute inset-0 size-full rounded-none" />
+              <StitchImage src={stitchAssets.suite} alt="Concept image of a light-filled shared residential room" className="absolute inset-0 size-full rounded-none" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
               <div className="absolute bottom-0 p-8 text-white">
-                <h3 className="text-3xl font-semibold">Private suites</h3>
-                <p className="mt-3 max-w-lg text-white/80">Personal space for familiar belongings, quiet routines, and restful moments.</p>
+                <h3 className="text-3xl font-semibold">Restful rooms</h3>
+                <p className="mt-3 max-w-lg text-white/80">Comfortable space for familiar belongings, quiet routines, and restful moments.</p>
               </div>
             </article>
             <article className="rounded-xl bg-secondary p-8 lg:col-span-5">
@@ -84,7 +84,7 @@ export default function AboutPage() {
               <p className="mt-4 leading-7 text-muted-foreground">Clear pathways and connected spaces support comfortable movement throughout the day.</p>
             </article>
             <article className="relative overflow-hidden rounded-xl lg:col-span-5">
-              <StitchImage src={stitchAssets.social} alt="Concept image of a warm shared lounge" className="absolute inset-0 size-full rounded-none" />
+              <StitchImage src={stitchAssets.social} alt="Concept image of older adults enjoying music together" className="absolute inset-0 size-full rounded-none" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/75 to-transparent" />
               <h3 className="absolute bottom-6 left-6 text-2xl font-semibold text-white">Shared living spaces</h3>
             </article>
